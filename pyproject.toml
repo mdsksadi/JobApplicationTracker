@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "job-application-tracker"
+version = "0.1.0"
+description = "A beautiful desktop tracker for job applications with weekly goals, licensing, and on-demand export."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Shekh Sadi" }]
+keywords = ["job", "tracker", "applications", "customtkinter", "productivity"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: X11 Applications",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business",
+]
+dependencies = [
+    "customtkinter>=5.2",
+    "cryptography>=42",
+    "platformdirs>=4",
+]
+
+[project.optional-dependencies]
+excel = ["openpyxl>=3.1"]
+
+[project.scripts]
+job-application-tracker = "job_application_tracker.main:main"
+jat = "job_application_tracker.main:main"
+
+[project.urls]
+Homepage = "https://github.com/ShekhSadi/JobApplicationTracker"
+Source = "https://github.com/ShekhSadi/JobApplicationTracker"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+job_application_tracker = ["assets/*.pem", "assets/*.png", "assets/*.ico"]
