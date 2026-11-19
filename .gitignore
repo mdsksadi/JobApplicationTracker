@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Testing / tooling
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Private licensing keys -- NEVER commit these
+keys/
+*.pem.key
+private_key.pem
+
+# Runtime data: application records are exported only on demand
+data/
+applications.*
+activity.log
+*.csv
+*.xlsx
+
+# OS
+Thumbs.db
+.DS_Store
